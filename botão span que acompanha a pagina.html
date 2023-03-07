@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Botão em HTML com Função JavaScript que Abre um Link Externo</title>
+	<style type="text/css">
+		#botao {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			cursor: pointer;
+			opacity: 0.7;
+			transition: opacity 0.3s ease-in-out;
+		}
+		
+		#botao:hover {
+			opacity: 1;
+			transform: scale(1.1);
+		}
+	</style>
+</head>
+<body>
+
+	<a href="#" onclick="abrirSite()">
+		<img id="botao" src="https://disensa.com.br/assets/img/whatsapp.png" alt="Botão" width="75" height="75">
+	</a>
+
+	<script type="text/javascript">
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+		  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		    document.getElementById("botao").style.display = "block";
+		  } else {
+		    document.getElementById("botao").style.display = "none";
+		  }
+		}
+
+		function abrirSite() {
+			window.open("https://apsti.com.br/", "_blank");
+		}
+	</script>
+</body>
+</html>
